@@ -11,18 +11,50 @@
     <link rel="stylesheet" href="style.css"> 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <style>
+
+        .dark-mode-toggle,
+        .sidebar-toggle {
+          border-radius: 6px;
+          padding: 8px 10px;
+          border: none;
+          cursor: pointer;
+          background-color: #e0e0e0;
+          color: #333;              
+        }
+
+        .dark-mode-toggle:hover,
+        .sidebar-toggle:hover { filter: brightness(0.95); }
+        .dark-mode-toggle:active,
+        .sidebar-toggle:active { filter: brightness(0.9); }
+        
+        body.dark-mode .dark-mode-toggle,
+        body.dark-mode .sidebar-toggle {
+          background-color: #333; 
+          color: #f0f0f0;        
+        }
+
+        .dark-mode-toggle,
+        .sidebar-toggle {
+          border-radius: 16px;  
+          padding: 8px 10px;
+          border: none;
+          cursor: pointer;
+        }
+        
     </style>
 </head>
 
 <body>
-    <button class="dark-mode-toggle" id="darkModeToggle">
-        <i class="fas fa-moon"></i>
-    </button>
-     
-    <button class="sidebar-toggle" id="sidebarToggle">
-        <i class="fas fa-bars"></i>
-    </button>
-     
+
+        <button class="dark-mode-toggle" id="darkModeToggle">
+            <i class="fas fa-moon"></i>
+          </button>
+          
+          <button class="sidebar-toggle" id="sidebarToggle">
+            <i class="fas fa-bars"></i>
+          </button>
+
+
     <div class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <h2 class="sidebar-title"></h2>
@@ -57,7 +89,6 @@
         </ul>
          
         <div class="sidebar-footer">
-            <!-- <p>AAAI 2026</p> -->
         </div>
     </div>
      
@@ -68,7 +99,7 @@
                     <h1 class="title is-3">Unsupervised Single-Channel <br> Speech Separation with a Diffusion Prior <br>  under Speaker-Embedding Guidance</h1>
                     <h2 class="subtitle is-5">Runwu Shi, Kai Li, Chang Li, Jiang Wang, Sihan Tan, Kazuhiro Nakadai</h2>
                     <a class="button is-rounded is-medium"
-                    style="background-color:#333333; color:#ffffff; border:none;"
+                    style="background-color:#313131; color:#ffffff; border:none;"
                     href="https://github.com/RunwuShi/UnSepDiff?tab=readme-ov-file"
                     target="_blank">
                      <span class="icon">
